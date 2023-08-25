@@ -17,15 +17,15 @@ public class UserInfoDTO {
     @NotBlank(message = "Name is required")
     private String name;
 
-    @NotEmpty(message = "Thiếu password")
-    @Size(min = 8, message = "Password phải từ 8 kí tự trở lên")
+    @NotEmpty(message = "Please enter a password")
+    @Size(min = 8, message = "Password must be 8 characters or more")
     private String password;
 
-    @NotEmpty(message = "Chưa điền sđt bạn ơi")
+    @NotEmpty(message = "Please enter the phone number")
     @Pattern(regexp = "^[+]?[0-9]{10,13}$", message = "Invalid phone number format")
     private String phoneNumber;
 
-    @NotNull(message = "Thiếu Email")
-    @Email(message = "Email không hợp lệ")
+    @NotNull(message = "Please enter your email")
+    @Email(message = "Invalid email")
     private String email;
 }
